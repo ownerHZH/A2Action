@@ -1,5 +1,7 @@
 # A2Action (RAG 2.0) — Client ↔ Server Tool‑Routing Framework
 
+<a href="https://www.producthunt.com/products/echovita?embed=true&amp;utm_source=badge-featured&amp;utm_medium=badge&amp;utm_campaign=badge-echovita" target="_blank" rel="noopener noreferrer"><img alt="Echovita - The local AI Router product advocates that intent is action | Product Hunt" width="250" height="54" src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=1050437&amp;theme=light&amp;t=1766047279527"></a>
+
 **A2Action = Agent to Action**。核心是把用户的自然语言（文本/语音转写）转化为能在客户端执行的 **Action** 或 **Action chain（toolPlan）**，让 AI 从“会聊天”升级为“能真正触发与编排设备能力”的 Agent。我们相信这会成为未来 AI 产品的重要趋势与默认形态。
 
 这是一个从 EchoVita 项目中抽象出来的 **RAG 2.0（Tool‑RAG）架构 + 客户端交互协议** 的最小可运行 Demo：  
