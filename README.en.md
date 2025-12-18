@@ -1,4 +1,4 @@
-# A2Action (RAG 2.0) — Client ↔ Server Tool‑Routing Framework (Demo)
+# A2Action (RAG 2.0) — Client ↔ Server Tool‑Routing Framework
 
 **A2Action = Agent to Action.** The core idea is to transform user natural language (text / speech‑to‑text) into **executable client‑side Actions** or an **Action chain (toolPlan)**, so AI products move from “chatting” to “doing and orchestrating” on-device capabilities. We believe this will be a major trend and the default shape of future AI products.
 
