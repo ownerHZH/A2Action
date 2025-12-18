@@ -9,13 +9,13 @@ Think of it as an end‑to‑end skeleton for:
 
 Note: This repo intentionally contains **framework + protocol only** and excludes EchoVita’s production features and implementation details.
 
-中文版本：`README.md`
+中文版本：[README.md](README.md)
 
 ## Layout
 
-- `server/firebase/functions/`: Firebase Functions (Node.js 20 + TypeScript) callable `a2actionOrchestrator` (Tool‑RAG selection + dynamic prompt injection + LLM call)
-- `client/flutter/`: Flutter client SDK (capability catalog export → callable invocation → toolPlan/toolCall execution loop)
-- `docs/`: architecture and protocol docs
+- [server/firebase/functions/](server/firebase/functions/): Firebase Functions (Node.js 20 + TypeScript) callable `a2actionOrchestrator` (Tool‑RAG selection + dynamic prompt injection + LLM call)
+- [client/flutter/](client/flutter/): Flutter client SDK (capability catalog export → callable invocation → toolPlan/toolCall execution loop)
+- [docs/](docs/): architecture and protocol docs
 
 ## What “RAG 2.0” means here
 
@@ -60,7 +60,7 @@ sequenceDiagram
 
 ## Quick start
 
-Detailed instructions: `docs/DEPLOYMENT.en.md` (English) / `docs/DEPLOYMENT.zh-CN.md` (中文).
+Detailed instructions: [docs/DEPLOYMENT.en.md](docs/DEPLOYMENT.en.md) (English) / [docs/DEPLOYMENT.zh-CN.md](docs/DEPLOYMENT.zh-CN.md) (中文).
 
 ### 1) Server (Firebase Functions)
 
@@ -118,22 +118,22 @@ Try:
 ## Add a real action (recommended flow)
 
 1) Client: implement an `A2Action` and register it in the registry
-2) Server: add the same `actionId` to `server/firebase/functions/src/tools/registry.json`
+2) Server: add the same `actionId` to [server/firebase/functions/src/tools/registry.json](server/firebase/functions/src/tools/registry.json)
 3) Rebuild vectors: `npm --prefix server/firebase/functions run build:tool-vectors`
 4) Deploy Functions: `cd server/firebase && npm --prefix functions run build && firebase deploy --only functions`
 
 Docs:
-- `docs/ARCHITECTURE.en.md` / `docs/ARCHITECTURE.zh-CN.md`
-- `docs/PROTOCOL.en.md` / `docs/PROTOCOL.zh-CN.md`
-- `docs/DEPLOYMENT.en.md` / `docs/DEPLOYMENT.zh-CN.md`
+- [docs/ARCHITECTURE.en.md](docs/ARCHITECTURE.en.md) / [docs/ARCHITECTURE.zh-CN.md](docs/ARCHITECTURE.zh-CN.md)
+- [docs/PROTOCOL.en.md](docs/PROTOCOL.en.md) / [docs/PROTOCOL.zh-CN.md](docs/PROTOCOL.zh-CN.md)
+- [docs/DEPLOYMENT.en.md](docs/DEPLOYMENT.en.md) / [docs/DEPLOYMENT.zh-CN.md](docs/DEPLOYMENT.zh-CN.md)
 
 ## EchoVita (recommended)
 
 This framework is proven in **EchoVita** (a conversational device wellness assistant).
 
-- iOS: https://apps.apple.com/us/app/echovita/id6755916301
-- Android: https://play.google.com/store/apps/details?id=com.assistant.echovita.localmcp.ai
-- Product Hunt: https://www.producthunt.com/products/echovita?launch=echovita&utm_source=github.com
+- iOS: [https://apps.apple.com/us/app/echovita/id6755916301](https://apps.apple.com/us/app/echovita/id6755916301)
+- Android: [https://play.google.com/store/apps/details?id=com.assistant.echovita.localmcp.ai](https://play.google.com/store/apps/details?id=com.assistant.echovita.localmcp.ai)
+- Product Hunt: [https://www.producthunt.com/products/echovita?launch=echovita&utm_source=github.com](https://www.producthunt.com/products/echovita?launch=echovita&utm_source=github.com)
 
 ## License
 

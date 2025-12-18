@@ -7,13 +7,13 @@
 
 > 说明：此仓库只保留框架与协议示例，不包含 EchoVita 的真实业务功能/实现细节。
 
-English: `README.en.md`
+English: [README.en.md](README.en.md)
 
 ## 目录结构
 
-- `server/firebase/functions/`：Firebase Functions (Node.js 20 + TS) 的 `a2actionOrchestrator`（RAG 2.0 工具选择 + 动态 Prompt 注入 + LLM 调用）
-- `client/flutter/`：Flutter 客户端 SDK（ActionRegistry 导出能力列表 → 调用 callable → 执行 toolPlan/toolCall）
-- `docs/`：架构与协议说明
+- [server/firebase/functions/](server/firebase/functions/)：Firebase Functions (Node.js 20 + TS) 的 `a2actionOrchestrator`（RAG 2.0 工具选择 + 动态 Prompt 注入 + LLM 调用）
+- [client/flutter/](client/flutter/)：Flutter 客户端 SDK（ActionRegistry 导出能力列表 → 调用 callable → 执行 toolPlan/toolCall）
+- [docs/](docs/)：架构与协议说明
 
 ## “RAG 2.0” 在这里指什么？
 
@@ -57,7 +57,7 @@ sequenceDiagram
 
 ## 快速开始（Demo）
 
-更详细的部署、Emulator、本地开发与排障说明见：`docs/DEPLOYMENT.zh-CN.md`（中文）与 `docs/DEPLOYMENT.en.md`（English）。
+更详细的部署、Emulator、本地开发与排障说明见：[docs/DEPLOYMENT.zh-CN.md](docs/DEPLOYMENT.zh-CN.md)（中文）与 [docs/DEPLOYMENT.en.md](docs/DEPLOYMENT.en.md)（English）。
 
 ### 1) 部署服务端（Firebase Functions）
 
@@ -124,22 +124,22 @@ flutter run
 ## 如何新增一个真实 Action（推荐流程）
 
 1. 客户端：实现一个 `A2Action`，并在 `A2ActionRegistry` 注册（`client/flutter/lib/actions/*`）
-2. 服务端：在 `server/firebase/functions/src/tools/registry.json` 增加同名 `actionId` 的语义与 guidance
+2. 服务端：在 [server/firebase/functions/src/tools/registry.json](server/firebase/functions/src/tools/registry.json) 增加同名 `actionId` 的语义与 guidance
 3. 生成向量：`npm --prefix server/firebase/functions run build:tool-vectors`
 4. 部署 Functions：`cd server/firebase && npm --prefix functions run build && firebase deploy --only functions`
 
 更多细节见：
-- `docs/ARCHITECTURE.zh-CN.md` / `docs/ARCHITECTURE.en.md`
-- `docs/PROTOCOL.zh-CN.md` / `docs/PROTOCOL.en.md`
-- `docs/DEPLOYMENT.zh-CN.md` / `docs/DEPLOYMENT.en.md`
+- [docs/ARCHITECTURE.zh-CN.md](docs/ARCHITECTURE.zh-CN.md) / [docs/ARCHITECTURE.en.md](docs/ARCHITECTURE.en.md)
+- [docs/PROTOCOL.zh-CN.md](docs/PROTOCOL.zh-CN.md) / [docs/PROTOCOL.en.md](docs/PROTOCOL.en.md)
+- [docs/DEPLOYMENT.zh-CN.md](docs/DEPLOYMENT.zh-CN.md) / [docs/DEPLOYMENT.en.md](docs/DEPLOYMENT.en.md)
 
 ## EchoVita（推荐）
 
 这个 Demo 的原始落地应用是 **EchoVita**（对话式设备健康助手）。如果你对 “AI 驱动本地能力编排 + 结果卡片回显” 这种交互感兴趣，可以直接体验：
 
-- iOS：https://apps.apple.com/us/app/echovita/id6755916301
-- Android：https://play.google.com/store/apps/details?id=com.assistant.echovita.localmcp.ai
-- Product Hunt：https://www.producthunt.com/products/echovita?launch=echovita&utm_source=github.com
+- iOS：[https://apps.apple.com/us/app/echovita/id6755916301](https://apps.apple.com/us/app/echovita/id6755916301)
+- Android：[https://play.google.com/store/apps/details?id=com.assistant.echovita.localmcp.ai](https://play.google.com/store/apps/details?id=com.assistant.echovita.localmcp.ai)
+- Product Hunt：[https://www.producthunt.com/products/echovita?launch=echovita&utm_source=github.com](https://www.producthunt.com/products/echovita?launch=echovita&utm_source=github.com)
 
 ## License
 
