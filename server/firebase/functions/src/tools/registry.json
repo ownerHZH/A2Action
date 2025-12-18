@@ -1,0 +1,27 @@
+{
+  "demo.echo.v1": {
+    "embedding_text": "Echo back user text, repeat message, test tool call, quick sanity check.",
+    "guidance": "Use for testing tool-calls. Args: { \"text\": \"...\" }.",
+    "signals": []
+  },
+  "demo.storage.scan.v1": {
+    "embedding_text": "Scan device storage, find junk, summarize cleanup opportunities, cache scan, temporary files scan, free up space.",
+    "guidance": "Use to simulate a storage scan. Args: { \"depth\": 3 } (optional).",
+    "signals": []
+  },
+  "demo.url.open.v1": {
+    "embedding_text": "Open website, browse url, visit a page, open link, search online.",
+    "guidance": "Use to open a website. Args: { \"url\": \"<URL>\" }. If user gives a loose query, convert it to a search URL.",
+    "signals": ["web"]
+  },
+  "demo.ocr.image.v1": {
+    "embedding_text": "Extract text from images, OCR, read screenshot, copy text from photo, recognize characters.",
+    "guidance": "Use for OCR on image attachments. Args: { \"files\": [\"{{attachments.<id>.path}}\"] }.",
+    "signals": ["image"]
+  },
+  "demo.playlist.open.v1": {
+    "embedding_text": "Play IPTV streams, open m3u playlist, m3u8 link, streaming playlist url.",
+    "guidance": "Use when user provides a URL ending in .m3u or .m3u8. Args: { \"url\": \"<M3U_URL>\" }.",
+    "signals": ["url_m3u"]
+  }
+}
